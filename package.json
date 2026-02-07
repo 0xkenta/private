@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run index.ts",
+    "build": "bun run index.ts",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check --apply .",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.14",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
