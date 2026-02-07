@@ -25,5 +25,12 @@ jobs:
         run: bun test
 
       - name: Tests completed
+        if: success()
         run: echo "✅ All tests passed successfully!"
+
+      - name: Tests failed
+        if: failure()
+        run: |
+          echo "❌ Tests failed! Workflow will now stop."
+          exit 1
 
