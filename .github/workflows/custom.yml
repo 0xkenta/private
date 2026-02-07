@@ -1,0 +1,17 @@
+name: Custom
+
+on: 
+  pull_request:
+    branches: [main]
+
+jobs:
+  custom:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: log
+        uses: actions/checkout@v4
+      - run: echo "ok"
+
+
+
