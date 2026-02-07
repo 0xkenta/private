@@ -27,6 +27,13 @@ jobs:
       - name: Check formatting
         run: bun run format
 
-      - name: Show modified files
-        run: git diff --name-only
+      - name: Check for modified files
+        run: |
+          if [ -n "$(git diff --name-only)" ]; then
+            echo "❌ The following files were modified by formatting:"
+            git diff --name-only
+            exit 1
+          else
+            echo "✅ No files were modified. Code is properly formatted!"
+          fi
 
