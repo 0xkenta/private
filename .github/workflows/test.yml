@@ -23,3 +23,7 @@ jobs:
 
       - name: Run tests
         run: bun test
+
+      - name: Tests completed
+        run: echo "✅ All tests passed successfully!"
+

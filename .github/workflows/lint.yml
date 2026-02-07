@@ -26,3 +26,7 @@ jobs:
 
       - name: Check formatting
         run: bun run format
+
+      - name: Show modified files
+        run: git diff --name-only
+
