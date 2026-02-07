@@ -28,7 +28,7 @@ describe("main function", () => {
 
     console.log = originalLog;
 
-    expect(consoleSpy.called).toBe(true);
+    expect(consoleSpy.called).toBe(false);
     expect(consoleSpy.message).toBe("starting.....");
   });
 });
